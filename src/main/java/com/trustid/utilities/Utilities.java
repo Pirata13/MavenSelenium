@@ -41,7 +41,20 @@ public class Utilities {
 		return objFound;
 	}
 	
-	
+	public boolean CSSElementDisplayed(WebDriver driver, String csslocator) {
+		
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		
+		if(driver.findElements(By.cssSelector(csslocator)).size() > 0){
+			
+			driver.findElement(By.cssSelector(csslocator)).click();
+			return true;
+			
+		}
+		
+		return false;
+		
+	}
 	
 	public void closeBrowser(WebDriver driver) {
 		

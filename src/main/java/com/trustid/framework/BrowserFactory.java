@@ -34,6 +34,7 @@ public class BrowserFactory {
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(33, TimeUnit.SECONDS);
 			driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
+			
 		}
 		return driver;
 	}
@@ -49,9 +50,9 @@ public class BrowserFactory {
 				driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
 				driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);*/
 			}else if(browserName.equalsIgnoreCase("chrome")){
-				System.out.println("in chrome");
+				System.out.println("Running in chrome");
 				WebDriver driver = null;
-				WebDriverManager.chromedriver().browserVersion("96.0.4664.55").setup();
+				WebDriverManager.chromedriver().browserVersion("105.0.5195.52").setup();
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("start-maximized"); 
 				options.addArguments("enable-automation"); 
@@ -67,6 +68,7 @@ public class BrowserFactory {
 				driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
 				
 				return driver;
+				
 			}else if(browserName.equalsIgnoreCase("IE")){
 				/*System.setProperty("webdriver.ie.driver", ""D:SoftwaresjarsIEDriverServer_Win32_3.14.0IEDriverServer.exe"");
 				driver=new InternetExplorerDriver();

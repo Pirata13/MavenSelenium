@@ -1,6 +1,5 @@
 package com.trustid.ui;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -38,7 +37,8 @@ public class Locators {
 		try {
 			
 			driver.manage().window().maximize();
-			driver.findElement(By.xpath("(//*[contains(@class,'a-button-input') and contains(@type, \"submit\")])[1]")).click();
+			
+			util.ElementDisplayed(driver);
 			
 			if(todayDeals.isDisplayed()) {
 				System.out.println(todayDeals.getText());

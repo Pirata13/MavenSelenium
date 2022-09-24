@@ -8,7 +8,7 @@ import com.trustid.framework.BrowserFactory;
 import com.trustid.ui.Locators;
 import com.trustid.ui.NavigationMenu;
 
-public class TestClass {
+public class AmazonTC {
 	
 	public static WebDriver driver;
 	
